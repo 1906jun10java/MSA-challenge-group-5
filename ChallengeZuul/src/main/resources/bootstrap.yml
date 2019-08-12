@@ -13,12 +13,12 @@ eureka:
     register-with-eureka: true
     
     
-#zuul:
-  #routes:
-    #gary:
-      #path: /flashcard/*
-      #service-id: flashcard-service
-      #strip-prefix: false
+zuul:
+  routes:
+    reimbursement-route:
+      path: /reimbursement/*
+      service-id: reimbursement-service
+      strip-prefix: false
     #gwen:
       #path: /api/*
       #service-id: conservative
