@@ -1,5 +1,15 @@
 package com.example.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="REIMBURSEMENT")
 public class Reimbursement {
 
 	
@@ -18,8 +28,15 @@ public class Reimbursement {
 		this.amount = amount;
 		this.employeeId = employeeId;
 	}
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO, generator="authorSequence")
+	@SequenceGenerator(allocationSize=1, name="authorSequence", sequenceName="SQ_AUTHOR_PK")
+	@Column(name="REIMBURSEMENT_ID")
 	private int id;
+	@Column(name="AMOUNT")
 	private double amount;
+	@Column(name="EMPLOYEE_ID")
 	private int employeeId;
 	
 	public int getId() {
