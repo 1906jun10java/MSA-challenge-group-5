@@ -30,8 +30,8 @@ public class Reimbursement {
 	}
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO, generator="authorSequence")
-	@SequenceGenerator(allocationSize=1, name="authorSequence", sequenceName="SQ_AUTHOR_PK")
+	@GeneratedValue(strategy=GenerationType.AUTO, generator="reimbursementSequence")
+	@SequenceGenerator(allocationSize=1, name="reimbursementSequence", sequenceName="SQ_REIMBURSEMENT_PK")
 	@Column(name="REIMBURSEMENT_ID")
 	private int id;
 	@Column(name="AMOUNT")
