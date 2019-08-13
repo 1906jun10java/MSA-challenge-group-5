@@ -1,5 +1,5 @@
-#server:
-  #port: 8761
+server:
+  port: 8764
   
 #the bootstrap file is what is loaded first, before application.properties
 
