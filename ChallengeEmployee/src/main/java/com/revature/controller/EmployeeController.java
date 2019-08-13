@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.bean.Employee;
 import com.revature.service.EmployeeService;
 
-
 @RestController
 @RefreshScope
 @RequestMapping(value="/employee")
