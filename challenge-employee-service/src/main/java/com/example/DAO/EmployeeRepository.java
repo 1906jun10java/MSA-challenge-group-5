@@ -8,14 +8,13 @@ import org.springframework.stereotype.Repository;
 import com.example.beans.Employee;
 
 
-	@Repository
+@Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 	
 	// other choices besides JpaRepository as parent type - also have CrudRepository (supertype)
 	// and PagingAndSortingRepository
 
 	// method name pattern matching
-public  List<Employee> getAllEmployee ();
-
-
+//public  List<Employee> getAllEmployee ();
+//
 	}

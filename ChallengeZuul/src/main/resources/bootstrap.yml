@@ -1,5 +1,5 @@
-server:
-  port: 8761
+#server:
+  #port: 8761
   
 #the bootstrap file is what is loaded first, before application.properties
 
@@ -15,18 +15,14 @@ eureka:
     
 zuul:
   routes:
-    reimbursement-route:
+    reimroute:
       path: /reimbursement/*
       service-id: reimbursement-service
       strip-prefix: false
-    #gwen:
-      #path: /api/*
-      #service-id: conservative
-      #strip-prefix: false
-    #animal:
-      #path: /sounds/*
-      #service-id: animalSoundsgoHolla
-      #strip-prefix: false
+    employeeroute:
+      path: /employee/*
+      service-id: employee-service
+      strip-prefix: false
       
 # URL=Universal Resource Locator
 

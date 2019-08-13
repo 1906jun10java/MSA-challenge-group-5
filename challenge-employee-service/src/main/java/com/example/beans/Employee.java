@@ -1,5 +1,9 @@
 package com.example.beans;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="EMPLOYEE")
 public class Employee {
 
 	public Employee() {
@@ -19,8 +23,12 @@ public class Employee {
 		this.lastName = lastName;
 	}
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO, generator="employeeSequence")
 	private int id;
+	@Column
 	private String firstName;
+	@Column
 	private String lastName;
 
 	public int getId() {
